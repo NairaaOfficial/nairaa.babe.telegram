@@ -33,4 +33,4 @@ jobs:
 
       # Run your Python script
       - name: Run Python script
-        run: python3 telegram_image.py
+        run: python3 TELEGRAM/telegram_image.py
