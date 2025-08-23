@@ -1,13 +1,10 @@
 import requests
 import os
 import random
-import dotenv
 
-dotenv.load_dotenv()
-
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+CHAT_ID = os.environ["CHAT_ID"]
+GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
 
 # Telegram endpoint for sending text
 URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"

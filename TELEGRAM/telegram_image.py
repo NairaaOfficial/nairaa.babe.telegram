@@ -5,13 +5,9 @@ import random
 import urllib.parse
 import http.client
 
-import dotenv
-
-dotenv.load_dotenv()
-
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
-RENDER_BASE_IMAGE_URL = os.getenv("RENDER_BASE_IMAGE_URL")
+BOT_TOKEN = os.environ["BOT_TOKEN"]
+CHAT_ID = os.environ["CHAT_ID"]
+RENDER_BASE_IMAGE_URL = os.environ["RENDER_BASE_IMAGE_URL"]
 
 # Telegram API endpoint for sending photos
 URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
