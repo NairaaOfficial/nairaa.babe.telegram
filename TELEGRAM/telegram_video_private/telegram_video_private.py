@@ -53,6 +53,22 @@ def read_counter(counter_file):
             return int(file.read())
     return 0
 
+def get_video_url_for_day(counter):
+    """
+    Returns a valid video URL for a given day.
+    Stops when a video is not found or max_attempts is reached.
+    """
+    
+    url = f"{RENDER_BASE_VIDEO_URL}/Video_{counter}.mp4"
+    parsed_url = urllib.parse.urlparse(url)
+    conn = http.client.HTTPSConnection(parsed_url.netloc)
+    conn.request("HEAD", parsed_url.path)
+    response = conn.getresponse()
+    if response.status == 200:
+        return url
+    else:
+        return None
+    
 def main():
    
     # Define a file to store the counter 
