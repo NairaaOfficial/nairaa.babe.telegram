@@ -2,8 +2,8 @@ name: TELEGRAM PRIVATE VIDEO UPLOADER
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '30 7 * * *'   # Runs at 1:00 PM IST
+  # schedule:
+  #   - cron: '30 7 * * *'   # Runs at 1:00 PM IST
   
 jobs:
   run-script:
