@@ -32,7 +32,9 @@ jobs:
 
       # Run your Python script
       - name: Run Python script
-        run: python3 TELEGRAM/telegram_video_public/counter_video_public.py
+        run: |
+          cd TELEGRAM/telegram_video_public
+          python3 counter_video_public.py
         
       # Check if TELEGRAM/telegram_video_public/counter_video_public.txt has been modified, pull, and push the modified changes.
       - name: Commit and Push Changes
