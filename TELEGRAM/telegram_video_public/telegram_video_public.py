@@ -72,7 +72,7 @@ def get_video_url_for_day(counter):
 def main():
    
     # Define a file to store the counter
-    counter_file = 'counter_video_public.txt'
+    counter_file = 'TELEGRAM/telegram_video_public/counter_video_public.txt'
     counter = read_counter(counter_file)
     # Execute the code
     print(f"Counter : {counter}")

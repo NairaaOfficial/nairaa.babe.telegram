@@ -32,8 +32,10 @@ jobs:
 
       # Run your Python script
       - name: Run Python script
-        run: python3 TELEGRAM/telegram_video_private/counter_video_private.py
-        
+        run: |
+          cd TELEGRAM/telegram_video_private
+          python3 counter_video_private.py
+
       # Check if TELEGRAM/telegram_video_private/counter_video_private.txt has been modified, pull, and push the modified changes.
       - name: Commit and Push Changes
         run: |
